@@ -1,4 +1,4 @@
 build/*
-# outputs/benchmark/*
-# outputs/plots/*
+outputs/benchmark/*
+outputs/plots/*
 src/plotting/venv
