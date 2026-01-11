@@ -1,0 +1,61 @@
+data_generation_type,n,insertion_sort_mean,insertion_sort_min,insertion_sort_max,merge_sort_mean,merge_sort_min,merge_sort_max,ratio,faster
+Random,5,18,10,131,35,30,283,0.526367,Insertion Sort
+Random,6,19,10,100,39,30,282,0.510541,Insertion Sort
+Random,7,37,10,34684,50,40,464,0.737529,Insertion Sort
+Random,8,20,10,142,51,40,333,0.394034,Insertion Sort
+Random,9,22,20,172,53,50,373,0.41476,Insertion Sort
+Random,10,23,20,152,58,50,414,0.399679,Insertion Sort
+Random,20,41,40,333,103,90,2924,0.398121,Insertion Sort
+Random,30,122,110,545,158,141,9793,0.76968,Insertion Sort
+Random,40,169,161,515,208,181,8119,0.811135,Insertion Sort
+Random,50,168,141,9218,282,231,11325,0.597044,Insertion Sort
+Random,60,361,352,908,326,292,10640,1.10672,Merge Sort
+Random,70,378,272,14079,380,332,14483,0.995196,Insertion Sort
+Random,80,563,383,10499,454,383,14926,1.24099,Merge Sort
+Random,90,507,494,10327,510,433,20443,0.995036,Insertion Sort
+Random,100,668,605,27280,570,494,10196,1.17023,Merge Sort
+Sorted,5,17,10,61,33,30,232,0.507626,Insertion Sort
+Sorted,6,17,10,201,38,30,283,0.450371,Insertion Sort
+Sorted,7,17,10,61,47,40,262,0.372293,Insertion Sort
+Sorted,8,18,10,61,46,40,232,0.383759,Insertion Sort
+Sorted,9,31,10,25796,48,40,272,0.643096,Insertion Sort
+Sorted,10,18,10,182,53,50,272,0.348747,Insertion Sort
+Sorted,20,21,20,212,103,100,333,0.209033,Insertion Sort
+Sorted,30,24,20,212,220,131,154060,0.112037,Insertion Sort
+Sorted,40,27,20,101,166,161,494,0.165606,Insertion Sort
+Sorted,50,30,20,181,223,192,716,0.135997,Insertion Sort
+Sorted,60,33,30,212,288,252,21387,0.116537,Insertion Sort
+Sorted,70,36,30,222,312,282,32162,0.116828,Insertion Sort
+Sorted,80,39,30,192,359,332,14174,0.111259,Insertion Sort
+Sorted,90,42,30,191,402,353,21619,0.106603,Insertion Sort
+Sorted,100,45,40,121,524,403,142156,0.0873977,Insertion Sort
+Reverse Sorted,5,18,10,131,34,30,232,0.552589,Insertion Sort
+Reverse Sorted,6,20,10,212,37,30,242,0.541965,Insertion Sort
+Reverse Sorted,7,21,20,111,45,40,272,0.475483,Insertion Sort
+Reverse Sorted,8,24,20,232,48,40,282,0.496459,Insertion Sort
+Reverse Sorted,9,26,20,192,53,40,303,0.498368,Insertion Sort
+Reverse Sorted,10,28,20,222,62,50,13861,0.448556,Insertion Sort
+Reverse Sorted,20,64,50,282,98,90,555,0.660918,Insertion Sort
+Reverse Sorted,30,128,110,474,136,131,525,0.946778,Insertion Sort
+Reverse Sorted,40,299,171,205984,173,161,595,1.72833,Merge Sort
+Reverse Sorted,50,346,252,124198,229,211,777,1.51011,Merge Sort
+Reverse Sorted,60,524,403,10865,271,262,636,1.93302,Merge Sort
+Reverse Sorted,70,610,585,9907,313,302,827,1.94841,Merge Sort
+Reverse Sorted,80,899,786,168930,452,353,118599,1.98822,Merge Sort
+Reverse Sorted,90,1114,1069,10815,444,383,10714,2.50364,Merge Sort
+Reverse Sorted,100,1415,1291,147229,514,433,119810,2.75183,Merge Sort
+Nearly Sorted,5,18,10,121,33,30,232,0.540244,Insertion Sort
+Nearly Sorted,6,17,10,111,39,30,353,0.444547,Insertion Sort
+Nearly Sorted,7,17,10,111,45,40,293,0.396277,Insertion Sort
+Nearly Sorted,8,22,10,5612,50,40,343,0.444868,Insertion Sort
+Nearly Sorted,9,18,10,81,58,40,7832,0.318828,Insertion Sort
+Nearly Sorted,10,20,10,131,55,50,373,0.370284,Insertion Sort
+Nearly Sorted,20,22,20,151,102,90,454,0.222306,Insertion Sort
+Nearly Sorted,30,35,30,172,139,131,726,0.253566,Insertion Sort
+Nearly Sorted,40,29,20,121,180,161,10436,0.165034,Insertion Sort
+Nearly Sorted,50,43,30,152,238,201,18451,0.180435,Insertion Sort
+Nearly Sorted,60,55,40,172,289,262,1049,0.190163,Insertion Sort
+Nearly Sorted,70,50,40,182,320,293,10679,0.157753,Insertion Sort
+Nearly Sorted,80,77,60,333,395,363,8539,0.195828,Insertion Sort
+Nearly Sorted,90,88,80,222,430,383,10779,0.204588,Insertion Sort
+Nearly Sorted,100,83,80,222,471,434,1444,0.177052,Insertion Sort
