@@ -1,9 +1,6 @@
-# Merge Sort VS. Insertion Sort
+# Strassen vs Standard Matrix Multiplication — Benchmark
 
-This project benchmarks and compares the performance of **Merge Sort** and **Insertion Sort**.  
-It is designed to measure execution time, analyze scalability, and visualize how both algorithms behave as the input size grows.
-
-The project uses a **high-performance C++ benchmarking engine** to generate accurate timing data and a **Python plotting pipeline** to transform those results into clear and readable charts.
+Este repositorio contiene un benchmark en C++ para comparar la **multiplicación estándar (3 bucles)** y el **algoritmo de Strassen**. El objetivo es medir empíricamente el umbral (N₀) a partir del cual Strassen resulta más rápido en una implementación concreta y máquina concreta.
 
 ---
 
