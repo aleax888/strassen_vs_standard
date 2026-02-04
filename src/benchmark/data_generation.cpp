@@ -6,81 +6,54 @@ std::string DataGeneration::to_string(Type type)
     {
     case Type::Random:
         return "Random";
-    case Type::Sorted:
-        return "Sorted";
-    case Type::ReverseSorted:
-        return "Reverse Sorted";
-    case Type::NearlySorted:
-        return "Nearly Sorted";
+    case Type::Zero:
+        return "Zero";
+    case Type::Identity:
+        return "Identity";
     default:
         return "Unknown";
     }
 }
 
-std::vector<int> DataGeneration::generate_data(size_t n, std::mt19937 &rng, Type dgt)
+std::pair<Matrix, Matrix> DataGeneration::generate_data(size_t n, std::mt19937 &rng, Type dgt)
 {
-    std::vector<int> generated_data(n);
+    Matrix A(n), B(n);
     if (n == 0)
-    {
-        return generated_data;
-    }
+        return {A, B};
 
-    std::uniform_int_distribution<int> distribution(INT_MIN, INT_MAX);
-    for (size_t i = 0; i < n; ++i)
-    {
-        generated_data[i] = distribution(rng);
-    }
+    std::uniform_real_distribution<double> distribution(-10.0, 10.0);
 
-    if (dgt == Type::Sorted)
+    if (dgt == Type::Random)
     {
-        std::sort(generated_data.begin(), generated_data.end());
-    }
-    else if (dgt == Type::ReverseSorted)
-    {
-        std::sort(generated_data.begin(), generated_data.end(), std::greater<>());
-    }
-    else if (dgt == Type::NearlySorted)
-    {
-        std::sort(generated_data.begin(), generated_data.end());
-        if (n >= 2)
+        for (size_t i = 0; i < n * n; ++i)
         {
-            const size_t swaps = std::max<size_t>(1, n / 100);
-            std::uniform_int_distribution<size_t> idx(0, n - 1);
-            for (size_t s = 0; s < swaps; ++s)
-            {
-                size_t i = idx(rng), j = idx(rng);
-                std::swap(generated_data[i], generated_data[j]);
-            }
+            A.a[i] = distribution(rng);
+            B.a[i] = distribution(rng);
+        }
+    }
+    else if (dgt == Type::Zero)
+    {
+        // already zero-initialized
+    }
+    else if (dgt == Type::Identity)
+    {
+        for (size_t i = 0; i < n; ++i)
+        {
+            A(i, i) = 1.0;
+            B(i, i) = 1.0;
         }
     }
 
-    return generated_data;
+    return {A, B};
 }
 
 std::vector<size_t> DataGeneration::generate_sizes()
 {
     std::vector<size_t> sizes;
 
-    // 5 → 10 (paso 1)
-    for (size_t n = 5; n < 10; ++n)
-    {
-        sizes.push_back(n);
-    }
-
-    // 10 → 100 (paso 10)
-    for (size_t n = 10; n < 100; n += 10)
-    {
-        sizes.push_back(n);
-    }
-
-    // 100 → 1'000 (paso 100)
-    for (size_t n = 100; n < 1'000; n += 100)
-    {
-        sizes.push_back(n);
-    }
-
-    // 1'000 → 10'000 (paso 1'000)
-    for (size_t n = 1'000; n <= 10'000; n += 1'000)
+    // powers of two from 8 up to 4096 (nearest power >= 4000)
+    // for (size_t n = 8; n <= 256; n *= 2)
+    for (size_t n = 8; n <= 1024; n *= 2)
     {
         sizes.push_back(n);
     }

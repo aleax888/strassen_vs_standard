@@ -15,10 +15,10 @@ for data_generation_type in df["data_generation_type"].unique():
     data = df[df["data_generation_type"] == data_generation_type]
 
     plt.figure(figsize=(8, 6))
-    plt.plot(data["n"], data["insertion_sort_mean"], label="Insertion Sort")
-    plt.plot(data["n"], data["merge_sort_mean"], label="Merge Sort")
+    plt.plot(data["n"], data["standard_mean"], label="Standard Multiplication")
+    plt.plot(data["n"], data["strassen_mean"], label="Strassen")
 
-    # plt.xscale("log") 
+    plt.xscale("log", base=2)
 
     plt.title(f"{data_generation_type}")
     plt.xlabel("n")

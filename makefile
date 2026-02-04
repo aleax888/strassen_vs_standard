@@ -4,10 +4,10 @@ TARGET = build/exe
 
 SRCS = \
     src/benchmark/main.cpp \
-    src/benchmark/insertion_sort.cpp \
-    src/benchmark/merge_sort.cpp \
+    src/benchmark/standard_multiplication.cpp \
+    src/benchmark/strassen.cpp \
     src/benchmark/data_generation.cpp \
-    src/benchmark/benchmark_sorts.cpp
+    src/benchmark/benchmark_matrix.cpp
 
 OBJS = $(SRCS:src/benchmark/%.cpp=build/%.o)
 
